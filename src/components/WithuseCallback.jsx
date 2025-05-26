@@ -1,11 +1,11 @@
-import React, { useCallback, useState } from 'react'
+import React, { memo, useCallback, useState } from 'react'
 
-const Child = ({ handleClick }) => {
+const Child = memo(({ handleClick }) => {
   console.log('Child component rendered');
   return (
     <button onClick={handleClick}>Child btn</button>
   )
-}
+})
 
 const WithuseCallback = () => {
   const [count, setCount] = useState();
